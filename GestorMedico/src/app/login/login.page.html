@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Inicio de sessión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label required="true" position="floating">Usuario</ion-label>
+    <ion-input required="true" type="text"[(ngModel)]="user.usuario" required minlength="3" maxlength="8" > </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Contraseña</ion-label>
+    <ion-input required="true" type="password" required minlength="4" maxlength="4" [(ngModel)]="user.password"> </ion-input>
+  </ion-item>
+
+  <ion-button color="dark" expand="block" (click)="ingresar()">
+    Ingresar
+  </ion-button>
+
+</ion-content>
