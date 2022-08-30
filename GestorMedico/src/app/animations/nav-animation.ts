@@ -1,7 +1,8 @@
 import { AnimationController,Animation } from "@ionic/angular";
 
 export const enterAnimation =(baseEl:HTMLElement, opts?: any): Animation=>{    //estamos creando una animacion propia la cual exportamos ael app.modules(modulo de aplicacion) 
-    const DURATION =1000; //definimos la duracion de la transicion que haremos con animacion en la pagina
+
+    const DURATION =400; //definimos la duracion de la transicion que haremos con animacion en la pagina
 
     //se crean estas restriciones para que el sistema no se caiga por completo 
     console.log('baseEl:',baseEl);
@@ -17,8 +18,8 @@ export const enterAnimation =(baseEl:HTMLElement, opts?: any): Animation=>{    /
         .fromTo('opacity',0,1);
     }else{
         const rootAnimation = animationCtrl.create() //animacion de ingreso 
-        .addElement(opts.enteringEl)
-        .duration(DURATION)
+        .addElement(opts.enteringEl) 
+        .duration(DURATION)                              //duracion de la transicion
         .easing('ease-in')
         .fromTo('opacity',0,1);
 
@@ -26,7 +27,7 @@ export const enterAnimation =(baseEl:HTMLElement, opts?: any): Animation=>{    /
         .addElement(opts.LeavingEl)
         .duration(DURATION)                             //duracion de la transicion
         .easing('ease-out')
-        .fromTo('opacity',1,0);
+        .fromTo('opacity',0,1);
 
         return animationCtrl.create().addAnimation([rootAnimation,leavingAnimation]);
     }
