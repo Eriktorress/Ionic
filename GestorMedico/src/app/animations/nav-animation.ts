@@ -1,7 +1,7 @@
 import { AnimationController,Animation } from "@ionic/angular";
 
 export const enterAnimation =(baseEl:HTMLElement, opts?: any): Animation=>{    //estamos creando una animacion propia la cual exportamos ael app.modules(modulo de aplicacion) 
-    const DURATION =1000; //definimos la duracion de la transicion que haremos con animacion en la pagina
+    const DURATION =400; //definimos la duracion de la transicion que haremos con animacion en la pagina
 
     //se crean estas restriciones para que el sistema no se caiga por completo 
     console.log('baseEl:',baseEl);
