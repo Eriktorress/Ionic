@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { AnimationController } from '@ionic/angular'; //importamos la libreria de control de animacion 
+import { AfterViewInit, Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -9,7 +10,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class HomePage {
 
   data: any; // Generamos una variable Any (permite cualquier valor)
-
   /**
    * En el constructor del HomePage se colocan por parametros
    * todas aquellas propiedades con el siguiente formato
@@ -19,7 +19,7 @@ export class HomePage {
    * : Indica que el identificador sera de la clase posterior a los : puntos
    * 
    */
-  constructor(private activeroute: ActivatedRoute, private router: Router) {
+  constructor(private activeroute: ActivatedRoute,private animationCtrl: AnimationController, private router: Router) {
     // Se llama a la ruta activa y se obtiene sus parametros mediante una subscripcion
     this.activeroute.queryParams.subscribe(params => { // Utilizamos lambda
       if (this.router.getCurrentNavigation().extras.state) { // Validamos que en la navegacion actual tenga extras
@@ -28,4 +28,5 @@ export class HomePage {
       } else { this.router.navigate(["/login"]) } // Si no tiene extra la navegacion actual navegar al login
     });
   }
+  
 }
