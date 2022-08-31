@@ -1,21 +1,19 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Inicio de sesión</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-  <ion-item>
-    <ion-label required="true" position="floating">Usuario</ion-label>
-    <ion-input required="true" type="text"[(ngModel)]="user.usuario" required minlength="3" maxlength="8" > </ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">Contraseña</ion-label>
-    <ion-input required="true" type="password" required minlength="4" maxlength="4" [(ngModel)]="user.password"> </ion-input>
-  </ion-item>
-
-  <ion-button color="dark" expand="block" (click)="ingresar()">
-    Ingresar
-  </ion-button>
-
+  <div class="header">
+    <h3>BIENVENIDO, <span></span></h3>
+    <h1> Ingresa<br> para continuar</h1>
+  </div>
+  <div class="form">
+    <ion-input type="text" [(ngModel)]="user.usuario" required minlength="3" maxlength="8"
+      placeholder="Usuario" required></ion-input>
+    <ion-input  placeholder="contraseña" type="password" required minlength="4" maxlength="4"
+      [(ngModel)]="user.password" required>
+    </ion-input>
+  </div>
+  <div class="button">
+    Ingresar <ion-icon name="chevron-forward-outline" (click)="ingresar()"></ion-icon>
+  </div>
+  <div class="footer">
+    <h3> ¿Aun no tienes cuenta? <span> Crear tu cuenta</span></h3>
+  </div>
 </ion-content>
