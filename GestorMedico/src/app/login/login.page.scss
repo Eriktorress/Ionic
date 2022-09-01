@@ -4,7 +4,7 @@ ion-content{
 
     .header{
         padding: 0 12vw;
-        margin-top: 9em;
+        margin-top: 50px;
         color: #ffff;
         h3{
             font-size: 1.1rem;
@@ -20,7 +20,7 @@ ion-content{
     }
     .form {
         padding:0 12vw;
-        margin-top: 70px;
+        margin-top: 50px;
         ion-input {
             --background: #7a197b;
             --padding-start: 33px;
@@ -34,7 +34,7 @@ ion-content{
     .button{
         width: 50vw;
         background-color: #ffde59;
-        margin-top: 100px;
+        margin-top: 20px;
         padding: 20px;
         border-top-right-radius: 30px;
         border-bottom-right-radius: 30px;
@@ -43,14 +43,12 @@ ion-content{
         font-size: 1.2rem;
         font-weight: 500;
         justify-content: flex-end;
-        ion-icon {
-            margin-left: 30px;
-        }
+  
     }
     .footer{
         color:#fff;
         padding: 0 12vw;
-        margin-top: 100px;
+        margin-top: 50px;
         text-align: center;
 
         h3{
